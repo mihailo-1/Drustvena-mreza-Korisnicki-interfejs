@@ -36,10 +36,10 @@ function get(id) {
       return response.json()
     })
     .then(user => { 
-      document.querySelector('#username').value = user.username
-      document.querySelector('#firstName').value = user.firstName
-      document.querySelector('#lastName').value = user.lastName
-      const formatted = new Date(user.dateOfBirth).toISOString().split('T')[0]; 
+      document.querySelector('#username').value = user.korisnickoIme
+      document.querySelector('#firstName').value = user.ime
+      document.querySelector('#lastName').value = user.prezime
+      const formatted = new Date(user.datumRodjenja).toISOString().split('T')[0]; 
       document.querySelector('#dateOfBirth').value = formatted
     })
     .catch(error => {
@@ -53,85 +53,81 @@ function get(id) {
 }
 
 function submit() {
-  const form = document.querySelector('#form')
-  const formData = new FormData(form)
-
-  const reqBody = {
-    username: formData.get('username'),
-    firstName: formData.get('firstName'),
-    lastName: formData.get('lastName'),
-    dateOfBirth: new Date(formData.get('dateOfBirth'))
-  }
-
-  const usernameErrorMessage = document.querySelector('#usernameError')
-  usernameErrorMessage.textContent = ''
-  const firstNameErrorMessage = document.querySelector('#firstNameError')
-  firstNameErrorMessage.textContent = ''
-  const lastNameErrorMessage = document.querySelector('#lastNameError')
-  lastNameErrorMessage.textContent = ''
-  const dateOfBirthErrorMessage = document.querySelector('#dateOfBirthError')
-  dateOfBirthErrorMessage.textContent = ''
-
-  if (reqBody.username.trim() === '') { 
-    usernameErrorMessage.textContent = 'Username field is required.'
-    return
-  }
-  if (reqBody.firstName.trim() === '') {
-    firstNameErrorMessage.textContent = 'First name field is required.'
-    return
-  }
-  if (reqBody.lastName.trim() === '') {
-    lastNameErrorMessage.textContent = 'Last name field is required.'
-    return
-  }
-
-  if (!formData.get('dateOfBirth')) {
-    dateOfBirthErrorMessage.textContent = 'Date of birth field is required.'
-    return
-  }
-
-  let method = 'POST'
-  let url = 'http://localhost:51509/api/users'
   
-  const urlParams = new URLSearchParams(window.location.search)
-  const id = urlParams.get('id')
-  if (id) {
-    method = 'PUT'
-    url = 'http://localhost:51509/api/users/' + id
+  document.querySelectorAll("[id$='Error']").forEach(el => el.textContent = '');
+
+  const form = document.querySelector('#form');
+  if (!form) {
+    alert('Forma nije pronadjena');
+    return;
   }
 
+  const formData = new FormData(form);
+
+  
+  const podaci = {
+    korisnickoIme:   formData.get('username')?.trim()    || '',
+    ime:             formData.get('firstName')?.trim()   || '',
+    prezime:         formData.get('lastName')?.trim()    || '',
+    datumRodjenja:   formData.get('dateOfBirth') 
+                       ? new Date(formData.get('dateOfBirth')).toISOString()
+                       : null
+  };
+
+  
+  if (!podaci.korisnickoIme) {
+    document.querySelector('#usernameError').textContent = 'Korisnicko ime je obavezno';
+    return;
+  }
+  if (!podaci.ime) {
+    document.querySelector('#firstNameError').textContent = 'Ime je obavezno';
+    return;
+  }
+  if (!podaci.prezime) {
+    document.querySelector('#lastNameError').textContent = 'Prezime je obavezno';
+    return;
+  }
+  if (!podaci.datumRodjenja) {
+    document.querySelector('#dateOfBirthError').textContent = 'Datum rodjenja je obavezan';
+    return;
+  }
+
+  
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get('id');
+
+  const method = id ? 'PUT' : 'POST';
+  const url = id 
+    ? `http://localhost:51509/api/users/${id}`
+    : 'http://localhost:51509/api/users';
+
+
+  
   fetch(url, {
     method: method,
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(reqBody)
+    body: JSON.stringify(podaci)
   })
-    .then(response => {
-      if (!response.ok) {
-        
-        const error = new Error('Request failed. Status: ' + response.status)
-        error.response = response 
-        throw error  
-      }
-      return response.json()
-    })
-    .then(data => {
-      window.location.href = '../users.html'
-    })
-    .catch(error => {
-      console.error('Error:', error.message)
-      
-      if (error.response && error.response.status === 404) {
-        alert('User does not exist!')
-      }
-      else if (error.response && error.response.status === 400) {
-        alert('Data is invalid!')
-      }
-      else {
-        alert('An error occurred while updating the data. Please try again.')
-      }
-    })
+  .then(async response => {
+    console.log('Status odgovora:', response.status);
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Greška ${response.status}: ${errorText}`);
+    }
+
+    return response.text(); 
+  })
+  .then(() => {
+    console.log('Uspešno sačuvano');
+    window.location.href = 'users.html';
+  })
+  .catch(err => {
+    console.error('Greška pri submitu:', err);
+    alert('Neuspešno čuvanje:\n' + err.message);
+  });
 }
 
 document.addEventListener('DOMContentLoaded', initializeForm)

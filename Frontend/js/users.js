@@ -77,7 +77,7 @@ function renderData(data) {
       let editButton = document.createElement('button')
       editButton.textContent = 'Edit'
       editButton.addEventListener('click', function () {
-        window.location.href = '../userForm.html?id=' + user['id']
+        window.location.href = 'userForm.html?id=' + user['id']
       })
       cell5.appendChild(editButton)
       newRow.appendChild(cell5)
