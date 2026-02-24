@@ -25,7 +25,9 @@ function prikaziGrupe(grupe) {
             <td>${g.id}</td>
             <td>${g.ime}</td> 
             <td>
-                <button onclick="obrisiGrupu(${g.id})">Obriši</button>
+                <button class="btn-members" onclick="window.location.href='users.html?id=${g.id}'">Članovi</button>
+                
+                <button class="btn-delete-group" onclick="obrisiGrupu(${g.id})">Obriši</button>
             </td>
         `;
         tbody.appendChild(tr);

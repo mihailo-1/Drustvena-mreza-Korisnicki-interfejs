@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\VS Code fajlovi\\Drustvena mreza, korisnicki interfejs\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\",
+  "WorkspaceRootPath": "E:\\visual studio 2025 projekti\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8BBFDD53-879A-4ADB-9BB7-29C08C5C85F3}|Drustvena mreza-clanovi i grupe\\Drustvena mreza-clanovi i grupe.csproj|d:\\vs code fajlovi\\drustvena mreza, korisnicki interfejs\\drustvena-mreza-korisnicki-interfejs\\backend\\drustvena mreza-clanovi i grupe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BBFDD53-879A-4ADB-9BB7-29C08C5C85F3}|Drustvena mreza-clanovi i grupe\\Drustvena mreza-clanovi i grupe.csproj|e:\\visual studio 2025 projekti\\drustvena-mreza-korisnicki-interfejs\\backend\\drustvena mreza-clanovi i grupe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BBFDD53-879A-4ADB-9BB7-29C08C5C85F3}|Drustvena mreza-clanovi i grupe\\Drustvena mreza-clanovi i grupe.csproj|solutionrelative:drustvena mreza-clanovi i grupe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BBFDD53-879A-4ADB-9BB7-29C08C5C85F3}|Drustvena mreza-clanovi i grupe\\Drustvena mreza-clanovi i grupe.csproj|d:\\vs code fajlovi\\drustvena mreza, korisnicki interfejs\\drustvena-mreza-korisnicki-interfejs\\backend\\drustvena mreza-clanovi i grupe\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BBFDD53-879A-4ADB-9BB7-29C08C5C85F3}|Drustvena mreza-clanovi i grupe\\Drustvena mreza-clanovi i grupe.csproj|e:\\visual studio 2025 projekti\\drustvena-mreza-korisnicki-interfejs\\backend\\drustvena mreza-clanovi i grupe\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BBFDD53-879A-4ADB-9BB7-29C08C5C85F3}|Drustvena mreza-clanovi i grupe\\Drustvena mreza-clanovi i grupe.csproj|solutionrelative:drustvena mreza-clanovi i grupe\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BBFDD53-879A-4ADB-9BB7-29C08C5C85F3}|Drustvena mreza-clanovi i grupe\\Drustvena mreza-clanovi i grupe.csproj|d:\\vs code fajlovi\\drustvena mreza, korisnicki interfejs\\drustvena-mreza-korisnicki-interfejs\\backend\\drustvena mreza-clanovi i grupe\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BBFDD53-879A-4ADB-9BB7-29C08C5C85F3}|Drustvena mreza-clanovi i grupe\\Drustvena mreza-clanovi i grupe.csproj|e:\\visual studio 2025 projekti\\drustvena-mreza-korisnicki-interfejs\\backend\\drustvena mreza-clanovi i grupe\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BBFDD53-879A-4ADB-9BB7-29C08C5C85F3}|Drustvena mreza-clanovi i grupe\\Drustvena mreza-clanovi i grupe.csproj|solutionrelative:drustvena mreza-clanovi i grupe\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,9 +28,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\VS Code fajlovi\\Drustvena mreza, korisnicki interfejs\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Program.cs",
+              "DocumentMoniker": "E:\\visual studio 2025 projekti\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Program.cs",
               "RelativeDocumentMoniker": "Drustvena mreza-clanovi i grupe\\Program.cs",
-              "ToolTip": "D:\\VS Code fajlovi\\Drustvena mreza, korisnicki interfejs\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Program.cs",
+              "ToolTip": "E:\\visual studio 2025 projekti\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Program.cs",
               "RelativeToolTip": "Drustvena mreza-clanovi i grupe\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -41,9 +41,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\VS Code fajlovi\\Drustvena mreza, korisnicki interfejs\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Controllers\\UserController.cs",
+              "DocumentMoniker": "E:\\visual studio 2025 projekti\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Drustvena mreza-clanovi i grupe\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\VS Code fajlovi\\Drustvena mreza, korisnicki interfejs\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Controllers\\UserController.cs",
+              "ToolTip": "E:\\visual studio 2025 projekti\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Controllers\\UserController.cs",
               "RelativeToolTip": "Drustvena mreza-clanovi i grupe\\Controllers\\UserController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -53,9 +53,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "GroupController.cs",
-              "DocumentMoniker": "D:\\VS Code fajlovi\\Drustvena mreza, korisnicki interfejs\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Controllers\\GroupController.cs",
+              "DocumentMoniker": "E:\\visual studio 2025 projekti\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Controllers\\GroupController.cs",
               "RelativeDocumentMoniker": "Drustvena mreza-clanovi i grupe\\Controllers\\GroupController.cs",
-              "ToolTip": "D:\\VS Code fajlovi\\Drustvena mreza, korisnicki interfejs\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Controllers\\GroupController.cs",
+              "ToolTip": "E:\\visual studio 2025 projekti\\Drustvena-mreza-Korisnicki-interfejs\\Backend\\Drustvena mreza-clanovi i grupe\\Controllers\\GroupController.cs",
               "RelativeToolTip": "Drustvena mreza-clanovi i grupe\\Controllers\\GroupController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
