@@ -30,50 +30,46 @@ function getAll() {
 
 function renderData(data) {
   let table = document.querySelector('table tbody')
-  
   table.innerHTML = ''  
-
   let tableHeader = document.querySelector('table thead') 
+  let noDataMessage = document.querySelector('#no-data-message'); 
 
   
-  if (data.length === 0) {
+  if (!data || data.length === 0) {
     
-    tableHeader.classList.add('hidden')
-
-    
-    let noDataMessage = document.querySelector('#no-data-message')
-    noDataMessage.classList.remove('hidden')
+    tableHeader.classList.add('hidden');
+    noDataMessage.style.display = 'block'; // direktno forsiraj prikaz
+    noDataMessage.classList.remove('hidden');
 
   } else {
     
-    let noDataMessage = document.querySelector('#no-data-message')
-    noDataMessage.classList.add('hidden')
-
-   
-    tableHeader.classList.remove('hidden')
-
+    let noDataMessage = document.querySelector('#no-data-message');
+    if (noDataMessage) {
+        noDataMessage.style.display = 'none';
+      }
+      tableHeader.classList.remove('hidden');
    
     data.forEach(user => {
       let newRow = document.createElement('tr')
 
      
       let cell1 = document.createElement('td')
-      cell1.textContent = user['username']
+      cell1.textContent = user['korisnickoIme']
       newRow.appendChild(cell1)
 
       
       let cell2 = document.createElement('td')
-      cell2.textContent = user['firstName']
+      cell2.textContent = user['ime']
       newRow.appendChild(cell2)
 
       
       let cell3 = document.createElement('td')
-      cell3.textContent = user['lastName']
+      cell3.textContent = user['prezime']
       newRow.appendChild(cell3)
 
       
       let cell4 = document.createElement('td')
-      cell4.textContent = new Date(user['dateOfBirth']).toISOString().split('T')[0]
+      cell4.textContent = user['datumRodjenja'] ? new Date(user['datumRodjenja']).toLocaleDateString('sr-RS') : '/';
       newRow.appendChild(cell4)
 
       
