@@ -1,0 +1,97 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+table th {
+  background-color: #2c3e50;
+  color: white;
+  padding: 12px;
+}
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #c9302c;
+}
+
+.navbar {
+  background-color: #2c3e50;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  height: 70px;
+}
+
+.logo {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  gap: 8px;
+}
+
+.nav-links li a {
+  color: #dfe6e9;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: all 0.18s ease;
+}
+
+.nav-links li a:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.nav-links li a.active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.18);
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=style.css.map */
